@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+
+img {
+	width: inherit;
+	height: inherit;
+	display: block;
+}
+
+:root {
+	--bgcCard: #F3F4F6;
+	--size-primary: #2C3E49;
+	--size-sub: #69707F;
+	--white: #fff;
+	--photo: url('../image/jobs3.jpg');
+}
+
+.card {
+	height: 270px;
+	background-color: var(--bgcCard);
+	overflow: hidden;
+	
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	display: flex;
+	flex-flow: row nowrap;
+	
+	border-radius: 16px;
+}
+
+.card p {
+	white-space: nowrap;
+}
+
+.card__content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	
+	padding: 40px;
+	height: 100%;
+}
+
+.card__image {
+	width: 240px;
+	height: 100%;
+}
+
+.card__title {
+	color: var(--size-primary);
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.card__synopsis {
+	color: var(--size-sub);
+	font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	.card {
+		height: auto;
+		padding: 40px;
+		
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.card p {
+		text-align: center;
+	}
+	
+	.card__image {
+		width: 140px;
+		height: 140px;
+		border-radius: 50%;
+		overflow: hidden;
+		
+		background-image: var(--photo);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.card__image img {
+		display: none;
+	}
+	
+	.card__content {
+		display: flex;
+		flex-flow: column nowrap;
+		
+		padding: 0;
+	}
+	
+	.card__title {
+		margin: 30px 0;
+		font-size: 26px;
+	}
+}
